@@ -73,3 +73,8 @@ textarea {
 p {
   margin: 0;
 }
+
+i {
+  color: white;
+  font-size: 2rem;
+}
