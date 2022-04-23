@@ -1,5 +1,5 @@
 var currentDate = moment().format("MMMM Do YYYY");
-var currentHour = moment().format("h");
+var currentHour = moment().format("H");
 var saveDiv = document.getElementsByClassName("save");
 
 // hourly object for text
@@ -9,11 +9,11 @@ var schedule = {
   10: "",
   11: "",
   12: "",
-  1: "",
-  2: "",
-  3: "",
-  4: "",
-  5: "",
+  13: "",
+  14: "",
+  15: "",
+  16: "",
+  17: "",
 };
 
 var setCurrentDate = function () {
@@ -69,11 +69,11 @@ var loadSchedule = function () {
       10: "",
       11: "",
       12: "",
-      1: "",
-      2: "",
-      3: "",
-      4: "",
-      5: "",
+      13: "",
+      14: "",
+      15: "",
+      16: "",
+      17: "",
     };
   }
 
@@ -95,7 +95,7 @@ var auditHour = function (hourEl) {
   $(hourBlock).removeClass("bg-secondary");
 
   // change background color based on time
-  if (hourDifference > 0) {
+  if (hourDifference > 0 && hourDifference) {
     $(hourEl).addClass("bg-success");
   } else if (hourDifference === 0) {
     $(hourEl).addClass("bg-danger");
@@ -106,15 +106,15 @@ var auditHour = function (hourEl) {
 
 setInterval(setCurrentDate, 1000 * 60);
 
-$(".hour-text").each(function (el) {
-  console.log(el);
+$(".hour-text").each(function (index, el) {
+  auditHour(el);
 });
 
-// setInterval(function () {
-//   $(".hour-text").each(function (el) {
-//     auditHour(el);
-//   });
-// }, 1000);
+setInterval(function () {
+  $(".hour-text").each(function (index, el) {
+    auditHour(el);
+  });
+}, 1000);
 
 // saveDiv.addEventListener("click", saveHandler);
 setCurrentDate();
