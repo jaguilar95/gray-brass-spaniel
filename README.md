@@ -1,7 +1,7 @@
 # Work Day Scheduler Starter Code
 
-This is a random password generator. When the button is clicked two different types of prompts will be presented. The first will ask the user to provide a password length between 8 and 128 characters. The second type will prompt the user to choose to include a character set four times, with at least one character set selected. It will then display a random password in the text box. If the button is clicked again, the prompts will run again and generate a new password on the updated criteria.
+This is a work day scheduler. When a user opens the document, a 8:00 am - 5:00 pm hourly scheduler is presented for the current day. The user can click on the text area and enter their items into it. When exiting the area, the items will be saved into local storage and will persist on reload. Each of the hour elements will have updated styles to be past, on, or after the hour.
 
-![The webpage for the password generator](</Develop/127.0.0.1_5500_Develop_index.html.png>)
+![The webpage for the password generator](/assets/images/jaguilar95.github.io_gray-brass-spaniel_.png)
 
-[Password generator link](https://jaguilar95.github.io/green-copper-poodle/)
+[Password generator link](https://jaguilar95.github.io/gray-brass-spaniel/)
